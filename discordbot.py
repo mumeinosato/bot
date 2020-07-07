@@ -7,13 +7,13 @@ from discord.ext import commands
 import os
 import traceback
 
-bot = commands.Bot(command_prefix="wb:", help_command=None)
+bot = commands.Bot(command_prefix="mu:", help_command=None)
 token = os.environ['DISCORD_BOT_TOKEN']
 
 
 @bot.event
 async def on_ready():
-    await bot.change_presence(activity=discord.Game(f"ヘルプは wb:help | 導入サーバー数: {len(bot.guilds)}"))
+    await bot.change_presence(activity=discord.Game(f"ヘルプは mu:help | 導入サーバー数: {len(bot.guilds)}"))
     
     #status=discord.Status.idle で退席状態に
     
@@ -43,9 +43,9 @@ async def help(ctx):#コマンドを定義するときの関数は必ずContext�
 @bot.command()
 async def about(ctx):
     embed = discord.Embed(title="このbotについて...", description="Weabot / うぇあぼっと",color=0x77aa27)
-    embed.add_field(name="製作者", value="うぇあChannel#6928",inline=True)
+    embed.add_field(name="製作者", value="Mumeinosato#7252",inline=True)
     embed.add_field(name="バージョン", value="Ver.1.6a\nコマンドフレームワーク移行版",inline=False)
-    embed.add_field(name="このbotを招待", value="[こちら](https://discord.com/oauth2/authorize?client_id=699585993988374628&permissions=379968&scope=bot)から招待できます",inline=False)
+    embed.add_field(name="このbotを招待", value="[こちら](https://discord.com/api/oauth2/authorize?client_id=729668738877620255&permissions=272103536&scope=bot)から招待できます",inline=False)
     await ctx.send(embed=embed)
 
 
