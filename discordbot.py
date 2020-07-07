@@ -114,34 +114,34 @@ async def on_message(message):
         await message.channel.send(f"{message.author.mention} ヘルプが必要ですか？\nwb:help でヘルプを表示します。")
 
     elif message.content.startswith("こんにち"):
-        await message.channel.send("こんにちは！")
+        await message.channel.send("こん")
 
     elif message.content.startswith("こんちゃ"):
-        await message.channel.send("こんちゃっちゃ！！")
+        await message.channel.send("こん")
 
     elif message.content.startswith("ども"):
-        await message.channel.send("どうも！")
+        await message.channel.send("どうーもです")
 
     elif message.content.startswith("よろし"):
-        await message.channel.send("よろしくお願いします！")
+        await message.channel.send("よろ〜")
 
     elif message.content.startswith("ただいま"):
-        await message.channel.send("おかえり～")
+        await message.channel.send("おか")
 
     elif message.content.startswith("飯落ち"):
-        await message.channel.send("いってらっしゃい！")
+        await message.channel.send("いってら")
 
     elif message.content.startswith("落ち"):
         await message.channel.send("お疲れ～")
 
     elif message.content.startswith("ばい"):
-        await message.channel.send("ばい～")
+        await message.channel.send("ばーい")
 
     elif message.content.startswith("死ね"):
-        await message.channel.send("暴言はまずいですよ！！")
+        await message.channel.send("そうゆうのよくないよ〜")
 
     elif message.content.startswith("おはよ"):
-        await message.channel.send("おはようございます～")
+        await message.channel.send("おは")
         
     elif message.content.startswith("暇"):
         await message.channel.send("俺も暇だな〜")
