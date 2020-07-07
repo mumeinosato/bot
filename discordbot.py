@@ -57,7 +57,7 @@ async def serverintroduction(ctx):
 
 @bot.command()
 async def newinfo(ctx):
-    await embox("新着情報","\n**2020 6/24** コマンドフレームワークへ移行しました。\n**2020 7/7** 試験運用を開始しました。\n**2020 7/7 **  BOTの稼働を開始しました。",0x77aa27,ctx.message)
+    await embox("新着情報","\n**2020 7/7** 試験運用を開始しました。\n**2020 7/7 **  BOTの稼働を開始しました。",0x77aa27,ctx.message)
 
 @bot.command()
 async def test(ctx):
