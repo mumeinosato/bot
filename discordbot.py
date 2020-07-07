@@ -111,7 +111,7 @@ async def on_message(message):
 
     if bot.user in message.mentions:
         print(f"{message.author.name}にメンションされました")
-        await message.channel.send(f"{message.author.mention} ヘルプが必要ですか？\nwb:help でヘルプを表示します。")
+        await message.channel.send(f"{message.author.mention}あんヘルプが必要なのか？\nmu:help でヘルプを表示します。")
 
     elif message.content.startswith("こんにち"):
         await message.channel.send("こん")
