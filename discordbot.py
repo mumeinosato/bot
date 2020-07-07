@@ -101,7 +101,6 @@ async def wiki(ctx, *,arg:str=""):
         await embox("TJAPlayer3","TJAPlayer3 とは、\nWindows向けの太鼓の達人エミュレーターの一つ。\n現在は配布を終了している。(Waybackmachineというツールを使用すればDL可)\n.tja 形式の譜面データと音源ファイルを用意することでプレイ可能。",0x77aa27,ctx.message)
 
         
-
             
 @bot.event
 async def on_message(message):
