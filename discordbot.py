@@ -100,17 +100,7 @@ async def wiki(ctx, *,arg:str=""):
     elif arg == "TJAPlayer3":
         await embox("TJAPlayer3","TJAPlayer3 とは、\nWindows向けの太鼓の達人エミュレーターの一つ。\n現在は配布を終了している。(Waybackmachineというツールを使用すればDL可)\n.tja 形式の譜面データと音源ファイルを用意することでプレイ可能。",0x77aa27,ctx.message)
 
-CHANNEL_ID = 730316191498895382# 任意のチャンネルID(int)
 
-# 任意のチャンネルで挨拶する非同期関数を定義
-async def greet():
-    channel = client.get_channel(CHANNEL_ID)
-    await channel.send('ハロー　Mumeinosato botが起動しました')
-
-# bot起動時に実行されるイベントハンドラを定義
-@client.event
-async def on_ready():
-    await greet() # 挨拶する非同期関数を実行
             
 @bot.event
 async def on_message(message):
