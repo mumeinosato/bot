@@ -110,8 +110,7 @@ async def on_message(message):
         await asyncio.sleep(2)
         x = random.randint(1,6) # 50から100の乱数をxに代入
         await embox("結果は、、",f"結果は {str(x)} でした！",0x77aa27,message)
-        return
-
+        retur
     elif message.content.startswith("こんにち"):
         await message.channel.send("こん")
 
@@ -124,7 +123,7 @@ async def on_message(message):
     elif message.content.startswith("よろし"):
         await message.channel.send("よろ")
 
-    elif message.content.startswith("ただいま"):
+    elif message.content.startswith("ただいま")
         await message.channel.send("おか")
 
     elif message.content.startswith("飯落ち"):
@@ -150,10 +149,7 @@ async def on_message(message):
         
 　  elif message.content.startswith("無名の里"):
         await message.channel.send("無名の里(ムメイノサト)はYouTuber、ゲーム開発者です。是非YouTubeチャンネル登録してね! https://www.youtube.com/channel/UCpb92184AP2Ffhyf7u2bD3w?view_as=subscriber")
-   
-    elif message.content.startswith("利用規約"):
-        await message.channel.send("無名の里のコンテンツ利用規約です。https://mumeinosato.wixsite.com/lfkf/白紙ページ")
-       
+  
     await bot.process_commands(message)#on_messageの定義内の最後にこれを入れないと定義したコマンドが動かなくなる。注意
 
 bot.run(token)
