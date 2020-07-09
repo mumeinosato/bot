@@ -29,7 +29,7 @@ async def embox(title,description,color,message):
 
 @bot.command()
 async def help(ctx):#コマンドを定義するときの関数は必ずContextという引数が渡される。つまり引数を最低一つだけでも書いておかないと動かないので注意
-    embed = discord.Embed(title="ヘルプ", description="このヘルプコマンドにはプレフィックスを書いていないため、\n実行には全て`mu:コマンド名`とする必要があります。",color=0x77aa27)
+    embed = discord.Embed(title="ヘルプ", description="このヘルプコマンドにはプレフィックスを書いていないため、\n実行には全て`muコマンド名`とする必要があります。",color=0x77aa27)
     #↑ここのテキストは自分で修正よろしく
     embed.add_field(name="help", value="このコマンドです。",inline=False)
     embed.add_field(name="newinfo", value="新着情報を確認します。",inline=False)
@@ -42,10 +42,10 @@ async def help(ctx):#コマンドを定義するときの関数は必ずContext�
 
 @bot.command()
 async def about(ctx):
-    embed = discord.Embed(title="このbotについて...", description="Mumeinosato bot / むめいのさと　ぼっと",color=0x77aa27)
+    embed = discord.Embed(title="このbotについて...", description="Mumeinosato bot/ むめいのさと　ぼっと",color=0x77aa27)
     embed.add_field(name="製作者", value="Mumeinosato#7252",inline=True)
     embed.add_field(name="バージョン", value="Ver.1.α\n試験運用版",inline=False)
-    embed.add_field(name="このbotを招待", value="[こちら](https://discord.com/api/oauth2/authorize?client_id=729668738877620255&permissions=272103536&scope=bot)から招待できます",inline=False)
+    embed.add_field(name="このbotを招待", value="[こちら](https://discord.com/api/oauth2/authorize?client_id=730773390897446946&permissions=272103536&scope=bot)から招待できます",inline=False)
     await ctx.send(embed=embed)
 
 
@@ -79,7 +79,7 @@ async def wiki(ctx, *,arg:str=""):
     ちなみに引数が無いときは空の文字列が自動で入るようになっているけどここの説明は難しいので省略
     """
     if not arg:#こうしておくと、文字列が空であるとき(つまりこの場合は引数が渡されなかったとき)にifの中が実行される
-        embed = discord.Embed(title="MumeinosatoのWikiへようこそ！", description="開発者が知っていることや関係することについてwiki形式で紹介します。\n(実行は全て`mu:wiki 単語名`というように行ってください。)",color=0x77aa27)
+        embed = discord.Embed(title="MumeinosatoのWikiへようこそ！", description="開発者が知っていることや関係することについてwiki形式で紹介します。\n(実行は全て`mus:wiki 単語名`というように行ってください。)",color=0x77aa27)
         embed.add_field(name="現在登録されているもの:", value="アスファルト 9: Legends\nNintendo Switch\nTJAPlayer3")
         await ctx.send(embed=embed)
 
@@ -103,14 +103,15 @@ async def on_message(message):
 
     if bot.user in message.mentions:
         print(f"{message.author.name}にメンションされました")
-        await message.channel.send(f"{message.author.mention} ヘルプが必要なのか？\nmu:help でヘルプを表示しろよ")
+        await message.channel.send(f"{message.author.mention} ヘルプが必要なのか？\nmi:help でヘルプを表示しろよ")
         
     elif message.content == "wb:dice":
         await embox("サイコロコマンドが実行されました",f"何が出るかな？！何が出るかな？！\n\n実行者:{message.author.name}",0x77aa27,message)
         await asyncio.sleep(2)
         x = random.randint(1,6) # 50から100の乱数をxに代入
         await embox("結果は、、",f"結果は {str(x)} でした！",0x77aa27,message)
-        retur
+        return
+
     elif message.content.startswith("こんにち"):
         await message.channel.send("こん")
 
@@ -123,7 +124,7 @@ async def on_message(message):
     elif message.content.startswith("よろし"):
         await message.channel.send("よろ")
 
-    elif message.content.startswith("ただいま")
+    elif message.content.startswith("ただいま"):
         await message.channel.send("おか")
 
     elif message.content.startswith("飯落ち"):
@@ -145,8 +146,8 @@ async def on_message(message):
         await message.channel.send("俺も暇だな〜")
         
     elif message.content.startswith("初めまして"):
-        await message.channel.send("よろ〜")
-       
+        await message.channel.send("初めまして！")                                  
+
     await bot.process_commands(message)#on_messageの定義内の最後にこれを入れないと定義したコマンドが動かなくなる。注意
 
 bot.run(token)
