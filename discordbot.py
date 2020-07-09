@@ -153,9 +153,6 @@ async def on_message(message):
 
     elif message.content.startswith("利用規約"):
         await message.channel.send("無名の里のコンテンツ利用規約です。https://mumeinosato.wixsite.com/lfkf/白紙ページ")
-   
-    elif message.content.startswith("サイト"):
-        await message.channel.send("無名の里のwebサイトです https://mumeinosato.wixsite.com/lfkf")
   
 　　await bot.process_commands(message)#on_messageの定義内の最後にこれを入れないと定義したコマンドが動かなくなる。注意
 
