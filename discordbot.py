@@ -149,7 +149,7 @@ async def on_message(message):
         await message.channel.send("俺も暇だな〜")
         
     elif message.content.startswith("無名の里"):
-        await message.channel.send("無名の里(ムメイノサト)はYouTuber、ゲーム開発者です。是非YouTubeチャンネル登録してね チャンネル:", value="[チャンネル](https://discord.gg/nFtHPAZ)")
+        await message.channel.send("無名の里(ムメイノサト)はYouTuber、ゲーム開発者です。是非YouTubeチャンネル登録してね")
 
     await bot.process_commands(message)#on_messageの定義内の最後にこれを入れないと定義したコマンドが動かなくなる。注意
 
