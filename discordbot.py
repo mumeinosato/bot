@@ -151,8 +151,6 @@ async def on_message(message):
     elif message.content.startswith("無名の里"):
         await message.channel.send("無名の里(ムメイノサト)はYouTuber、ゲーム開発者です。是非YouTubeチャンネル登録してね! https://www.youtube.com/channel/UCpb92184AP2Ffhyf7u2bD3w?view_as=subscriber")
 
-    elif messag.content.startswith("Mumeinosato"):
-        await message.channel.send("無名の里(ムメイノサト)はYouTuber、ゲーム開発者です。是非YouTubeチャンネル登録してね! https://www.youtube.com/channel/UCpb92184AP2Ffhyf7u2bD3w?view_as=subscriber")
     
     await bot.process_commands(message)#on_messageの定義内の最後にこれを入れないと定義したコマンドが動かなくなる。注意
 
