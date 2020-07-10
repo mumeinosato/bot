@@ -151,9 +151,6 @@ async def on_message(message):
     elif message.content.startswith("草"):
         await message.channel.send("草")
         
-    elif message.content.stareswith("w"):
-        await message.channel.send("www")
-        
     await bot.process_commands(message)#on_messageの定義内の最後にこれを入れないと定義したコマンドが動かなくなる。注意
 
 bot.run(token)
