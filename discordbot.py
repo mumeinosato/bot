@@ -105,7 +105,7 @@ async def on_message(message):
         print(f"{message.author.name}にメンションされました")
         await message.channel.send(f"{message.author.mention} ヘルプが必要なのか？\nmu:help でヘルプを表示しろよ")
         
-    elif message.content == "wb:dice":
+    elif message.content == "mu:dice":
         await embox("サイコロコマンドが実行されました",f"何が出るかな？！何が出るかな？！\n\n実行者:{message.author.name}",0x77aa27,message)
         await asyncio.sleep(2)
         x = random.randint(1,6) # 50から100の乱数をxに代入
