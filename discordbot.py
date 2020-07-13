@@ -162,6 +162,9 @@ async def on_message(message):
         
     elif message.content.startswith("だろ"):
         await message.channel.send("そうだよ")
+        
+    elif message.content.startswith("そうだよ"):
+        await message.channel.send("そうだよ")
     await bot.process_commands(message)#on_messageの定義内の最後にこれを入れないと定義したコマンドが動かなくなる。注意
 
 bot.run(token)
