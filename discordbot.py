@@ -1,4 +1,4 @@
-import discord
+import discor
 import random
 import time
 import asyncio
