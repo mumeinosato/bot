@@ -42,7 +42,7 @@ async def help(ctx):#コマンドを定義するときの関数は必ずContext�
 
 @bot.command()
 async def about(ctx):
-    embed = discord.Embed(title="このbotについて...", description="Mumeinosato bot/ むめいのさと　ぼっと",color=0x77aa27)
+    embed = discord.Embed(title="このbotについて...", description="Mumeinosato bot/ むめいのさと　ぼっと",color=0x4169e1)
     embed.add_field(name="製作者", value="Mumeinosato#7252",inline=True)
     embed.add_field(name="バージョン", value="Ver.1.α\n試験運用版",inline=False)
     embed.add_field(name="このbotを招待", value="[こちら](https://discord.com/api/oauth2/authorize?client_id=729668738877620255&permissions=272103536&scope=bot)から招待できます",inline=False)
@@ -51,17 +51,17 @@ async def about(ctx):
 
 @bot.command()
 async def serverintroduction(ctx):
-    embed = discord.Embed(title="開発者のサーバーについて...", description="以下のリンクから参加できます。",color=0x77aa27)
+    embed = discord.Embed(title="開発者のサーバーについて...", description="以下のリンクから参加できます。",color=0x4169e1)
     embed.add_field(name="招待リンク:", value="https://discord.gg/nFtHPAZ")
     await ctx.send(embed=embed)
 
 @bot.command()
 async def newinfo(ctx):
-    await embox("新着情報","\n**2020 7/9** 試験運用開始。\n**2020 7/9 **  BOTの稼働を開始しました。",0x77aa27,ctx.message)
+    await embox("新着情報","\n**2020 7/9** 試験運用開始。\n**2020 7/9 **  BOTの稼働を開始しました。",0x4169e1,ctx.message)
 
 @bot.command()
 async def test(ctx):
-    await embox("これはテストコマンドです。","特に意味はありません。",0x77aa27,ctx.message)
+    await embox("これはテストコマンドです。","特に意味はありません。",0x4169e1,ctx.message)
 
 @bot.command()
 async def ping(ctx):
