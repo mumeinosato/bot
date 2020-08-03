@@ -37,7 +37,7 @@ async def help(ctx):#コマンドを定義するときの関数は必ずContext�
     embed.add_field(name="dice", value="サイコロを振ることができます。",inline=False)
     embed.add_field(name="ping", value="botのメッセージ送信速度をチェックします。",inline=False)
     embed.add_field(name="about", value="botについてや、botの招待リンクを確認できます。",inline=False)
-    embed.add_field(name="support", value="開発者が運営しているサーバーについて表示できます。",inline=False)
+    embed.add_field(name="support", value="この botのサポートサーバーを表示できます。",inline=False)
     await ctx.send(embed=embed)#Contextにはいろいろな情報が入っており、そこから様々な関数、情報にアクセスできる。ctx.sendがその一つ
 
 @bot.command()
@@ -51,7 +51,7 @@ async def about(ctx):
 
 @bot.command()
 async def support(ctx):
-    embed = discord.Embed(title="開発者のサーバーについて...", description="以下のリンクから参加できます。",color=0x4169e1)
+    embed = discord.Embed(title="サポートサーバーについて...", description="以下のリンクから参加できます。",color=0x4169e1)
     embed.add_field(name="招待リンク:", value="https://discord.gg/nFtHPAZ")
     await ctx.send(embed=embed)
 
