@@ -36,6 +36,7 @@ async def help(ctx):#コマンドを定義するときの関数は必ずContext�
     embed.add_field(name="newinfo", value="新着情報を確認します。",inline=False)
     embed.add_field(name="wiki", value="開発者が知っていること、関係することについてwiki形式で見ることができます。",inline=False)
     embed.add_field(name="dice", value="サイコロを振ることができます。",inline=False)
+    embed.add_field(name="omikuji", value="おみくじを引くことができます。",inline=False)
     embed.add_field(name="ping", value="botのメッセージ送信速度をチェックします。",inline=False)
     embed.add_field(name="about", value="botについてや、botの招待リンクを確認できます。",inline=False)
     embed.add_field(name="support", value="この botのサポートサーバーを表示できます。",inline=False)
@@ -45,7 +46,7 @@ async def help(ctx):#コマンドを定義するときの関数は必ずContext�
 async def about(ctx):
     embed = discord.Embed(title="このbotについて...", description="Mumeinosato bot/ むめいのさと　ぼっと",color=0x4169e1)
     embed.add_field(name="製作者", value="Mumeinosato#7252",inline=True)
-    embed.add_field(name="バージョン", value="Ver.1.α\n試験運用版",inline=False)
+    embed.add_field(name="バージョン", value="Ver.1.1\nおみくじ実装版",inline=False)
     embed.add_field(name="このbotを招待", value="[こちら](https://discord.com/api/oauth2/authorize?client_id=729668738877620255&permissions=272103536&scope=bot)から招待できます",inline=False)
     await ctx.send(embed=embed)
 
@@ -58,7 +59,7 @@ async def support(ctx):
 
 @bot.command()
 async def newinfo(ctx):
-    await embox("新着情報","\n**2020 7/9** 試験運用開始。\n**2020 7/9 **  BOTの稼働を開始しました。",0x4169e1,ctx.message)
+    await embox("新着情報","\n**2020 8/12** おみくじ機能実装。　\n**2020 7/9** 試験運用開始。\n**2020 7/9 **  BOTの稼働を開始しました。",0x4169e1,ctx.message)
 
 @bot.command()
 async def test(ctx):
@@ -113,7 +114,7 @@ async def on_message(message):
         await embox("結果は、、",f"結果は {str(x)} だよ　分かったか",0x4169e1,message)
         return
 
-    elif message.content == "mu:おみくじ":
+    elif message.content == "mu:omikuji":
         # Embedを使ったメッセージ送信 と ランダムで要素を選択
         embed = discord.Embed(title="おみくじ", description=f"{message.author.mention}さんの今日の運勢は！",
                               color=0x4169e1)
