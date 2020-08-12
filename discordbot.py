@@ -146,7 +146,7 @@ async def on_message(message):
         await message.channel.send("俺も暇だな〜")
         
     elif message.content.startswith("初めまして"):
-        await message.channel.send("")
+        await message.channel.send("よろ〜")
         
     elif message.content.startswith("草"):
         await message.channel.send("草")
