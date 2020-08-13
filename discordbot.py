@@ -119,7 +119,7 @@ async def on_message(message):
         embed = discord.Embed(title="おみくじ", description=f"{message.author.mention}さんの今日の運勢は！",
                               color=0x4169e1)
         embed.set_thumbnail(url=message.author.avatar_url)
-        embed.add_field(name="[運勢] ", value=random.choice(('大吉', '吉', '凶', '大凶')), inline=False)
+        embed.add_field(name="[運勢] ", value=random.choice(('大大吉', '大吉', '向大吉', '末大吉', '吉', '中吉', '小吉', '後吉', '吉凶未分末大吉', '吉凶相交末吉', '吉凶相半', '吉凶相央', '小凶後吉', '凶後吉', '凶後大吉', '凶', '大凶')), inline=False)
         await message.channel.send(embed=embed)
     
     elif message.content.startswith("こんにち"):
@@ -178,6 +178,9 @@ async def on_message(message):
         
     elif message.content.startswith("こんばん"):
         await message.channel.send("こんばんわんこそば")
+        
+    elif message.content.startswith("mu:"):
+        await message.channel.send("無効なコマンドです。mu:helpでヘルプを表示します。")                           
        
     await bot.process_commands(message)#on_messageの定義内の最後にこれを入れないと定義したコマンドが動かなくなる。注意
 
