@@ -47,7 +47,7 @@ async def help(ctx):#コマンドを定義するときの関数は必ずContext�
 async def about(ctx):
     embed = discord.Embed(title="このbotについて...", description="Mumeinosato bot/ むめいのさと　ぼっと",color=0x4169e1)
     embed.add_field(name="製作者", value="Mumeinosato#7252",inline=True)
-    embed.add_field(name="バージョン", value="Ver.1.2\nおみくじ実装版",inline=False)
+    embed.add_field(name="バージョン", value="Ver.1.3.1\nwiki改良版",inline=False)
     embed.add_field(name="このbotを招待", value="[こちら](https://discord.com/api/oauth2/authorize?client_id=729668738877620255&permissions=272103536&scope=bot)から招待できます",inline=False)
     await ctx.send(embed=embed)
 
@@ -87,7 +87,7 @@ async def wiki(ctx, *,arg:str=""):
         await ctx.send(embed=embed)
 
     elif arg == "ゲーム":
-        await embox("ゲームカテゴリー","現在登録されているもの　\nアスファルト 9: Legends \nTJAPlayer3",0x4169e1,ctx.message)
+        await embox("ゲームカテゴリー","現在登録されているもの　\nアスファルト 9: Legends",0x4169e1,ctx.message)
    
     elif arg == "ゲーム機":
         await embox("ゲーム機カテゴリー","現在登録されているもの \nNintendo Switch",0x4169e1,ctx.message)
@@ -96,13 +96,10 @@ async def wiki(ctx, *,arg:str=""):
         await embox("SNSカテゴリー","現在登録されているもの \nDiscord",0x4169e1,ctx.message)
 
     elif arg == "アスファルト 9: Legends":#スペースまで一字一句一致してないとifの中が実行されないので変えた方がいいかも
-        await embox("アスファルト 9: Legends","アスファルト 9: Legends とは、\nゲームロフトが開発した\niOS、Android、Windows、Nintendo Switch、MacOS で\nプレイできるカーアクションレースゲームのこと。\nアスファルトシリーズ13作目(ナンバリングでは9作目)で、\n実在する車(マシン)を操作し、様々なロケーションでレースを行う。",0x4169e1,ctx.message)
+        await embox("アスファルト 9: Legends","アスファルト 9: Legends とは、\nhttps://ja.wikipedia.org/wiki/アスファルト9:Legends",0x4169e1,ctx.message)
     
     elif arg == "Nintendo Switch":
-        await embox("Nintendo Switch","Nintendo Switch とは、\n任天堂が開発・販売をしている、\n据え置き型ゲーム機のこと。",0x4169e1,ctx.message)
-
-    elif arg == "TJAPlayer3":
-        await embox("TJAPlayer3","TJAPlayer3 とは、\nWindows向けの太鼓の達人エミュレーターの一つ。\n現在は配布を終了している。(Waybackmachineというツールを使用すればDL可)\n.tja 形式の譜面データと音源ファイルを用意することでプレイ可能。",0x4169e1,ctx.message)
+        await embox("Nintendo Switch","Nintendo  Switch とは、\nhttps://ja.wikipedia.org/wiki/Nintendo_Switch",0x4169e1,ctx.message)
 
     elif arg == "Discord":
         await embox("Discord","Discordとは、 \nhttps://ja.wikipedia.org/wiki/Discord_(ソフトウェア)",0x4169e1,ctx.message)
