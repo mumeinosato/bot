@@ -196,7 +196,7 @@ async def on_message(message):
         await message.channel.send("こんばんわんこそば")
         
     elif message.content.startswith("mu:partnerserver"):
-        await message.channel.send("yysgsgsgs")
+        await embox("yysgsgsgs",0x4169e1,message)
                                  
        
     await bot.process_commands(message)#on_messageの定義内の最後にこれを入れないと定義したコマンドが動かなくなる。注意
