@@ -239,8 +239,8 @@ async def on_message(message):
     elif message.content.startswith("せやな"):
         await message.channel.send("https://tenor.com/view/%e7%8c%ab%e5%ae%ae%e3%81%b2%e3%81%aa%e3%81%9f-smile-virtual-youtuber-nekomiya-gif-11959563")
         
-    elif message.content.startswith("こんばん"):
-        await message.channel.send("こんばんわんこそば")    
+    elif message.content.startswith("そうだね"):
+        await message.channel.send("そうだよ")    
                                         
     await bot.process_commands(message)#on_messageの定義内の最後にこれを入れないと定義したコマンドが動かなくなる。注意
 
