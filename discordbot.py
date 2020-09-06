@@ -224,8 +224,8 @@ async def on_message(message):
     elif message.content.startswith("こんばん"):
         await message.channel.send("こんばんわんこそば")
         
-    elif message.content.startswith("こんばん"):
-        await message.channel.send("こんばんわんこそば")
+    elif message.content.startswith("今何時？"):
+        await message.channel.send("さて何時だろう。自分で見ろw")
         
     elif message.content.startswith("こんばん"):
         await message.channel.send("こんばんわんこそば")
