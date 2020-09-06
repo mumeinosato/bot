@@ -93,7 +93,7 @@ async def wiki(ctx, *,arg:str=""):
         await embox("ゲーム機カテゴリー","現在登録されているもの \nNintendo Switch",0x4169e1,ctx.message)
         
     elif arg == "SNS":
-        await embox("SNSカテゴリー","現在登録されているもの \nYouTube\nDiscord\nLINE",0x4169e1,ctx.message)
+        await embox("SNSカテゴリー","現在登録されているもの \nYouTube\nTwitter\nDiscord\nLINE",0x4169e1,ctx.message)
 
     elif arg == "アスファルト 9: Legends":#スペースまで一字一句一致してないとifの中が実行されないので変えた方がいいかも
         await embox("アスファルト 9: Legends","アスファルト 9: Legends とは、\nhttps://ja.wikipedia.org/wiki/アスファルト9:Legends",0x4169e1,ctx.message)
@@ -109,6 +109,9 @@ async def wiki(ctx, *,arg:str=""):
 
     elif arg == "YouTube":
         await embox("YouTube","YouTubeとは、 \nhttps://ja.wikipedia.org/wiki/YouTube",0x4169e1,ctx.message)
+       
+    elif arg == "Twitter":
+        await embox("Twitter","Twitterとは、　\nhttps://ja.wikipedia.org/wiki/Twitter",0x416e1,ctx.message)
 
 @bot.command()
 async def partnerserver(ctx):
