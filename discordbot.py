@@ -116,7 +116,7 @@ async def partnerserver(ctx):
     embed.add_field(name="申請ページ:", value="https://forms.gle/53okyZb9L6MXztzq6")
     await ctx.send(embed=embed)
     embed = discord.Embed(title="Weaの雑談サーバー", description="以下のリンクから参加できます ",color=0x4169e1)
-    embed.add_field(name="招待リンク:", value="https://discord.gg/csJHtxZ")
+    embed.add_field(name="招待リンク:", value="https://discord.gg/9ayfU9K")
     await ctx.send(embed=embed) 
 
 @bot.event
