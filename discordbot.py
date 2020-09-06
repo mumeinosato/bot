@@ -124,8 +124,14 @@ async def partnerserver(ctx):
     embed = discord.Embed(title="Torippiiism", description="以下のリンクから参加できます ",color=0x4169e1)
     embed.add_field(name="招待リンク:", value="https://discord.gg/kH6uR6R")
     await ctx.send(embed=embed) 
-    embed = discord.Embed(title="雑談サーバー旧(新型コロッケ)", description="以下のリンクから参加できます ",color=0x4169e1)
+    embed = discord.Embed(title="雑談サーバー旧(新型コロッケサーバー)", description="以下のリンクから参加できます ",color=0x4169e1)
     embed.add_field(name="招待リンク:", value="https://discord.gg/xmJT5As")
+    await ctx.send(embed=embed)
+    embed = discord.Embed(title="楽しく雑談サーバー", description="以下のリンクから参加できます ",color=0x4169e1)
+    embed.add_field(name="招待リンク:", value="https://discord.gg/By7efDM")
+    await ctx.send(embed=embed)
+    embed = discord.Embed(title="✨Eveyone's notepad✨", description="以下のリンクから参加できます ",color=0x4169e1)
+    embed.add_field(name="招待リンク:", value="https://discord.gg/JtSbYWP")
     await ctx.send(embed=embed)
     
 @bot.event
