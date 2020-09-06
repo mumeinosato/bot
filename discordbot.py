@@ -47,7 +47,7 @@ async def help(ctx):#コマンドを定義するときの関数は必ずContext�
 async def about(ctx):
     embed = discord.Embed(title="このbotについて...", description="Mumeinosato bot/ むめいのさと　ぼっと",color=0x4169e1)
     embed.add_field(name="製作者", value="Mumeinosato#7252",inline=True)
-    embed.add_field(name="バージョン", value="Ver.1.3.2\nwiki改良版",inline=False)
+    embed.add_field(name="バージョン", value="Ver.1.3.3\n提携サーバー表示版",inline=False)
     embed.add_field(name="このbotを招待", value="[こちら](https://discord.com/api/oauth2/authorize?client_id=729668738877620255&permissions=272103536&scope=bot)から招待できます",inline=False)
     await ctx.send(embed=embed)
 
@@ -60,7 +60,7 @@ async def support(ctx):
 
 @bot.command()
 async def newinfo(ctx):
-    await embox("新着情報","\n**2020 9/6** wiki:LINE、YouTube追加。　\n**2020 9/5**　wiki改良。\n**2020 8/13** おみくじ内容追加。　\n**2020 8/12** おみくじ機能実装。　\n**2020 7/9** 試験運用開始。\n**2020 7/9 **  BOTの稼働を開始しました。",0x4169e1,ctx.message)
+    await embox("新着情報","\n**2020 9/6** 提携サーバー「partnerserver」で確認可能。　\n**2020 9/6** wiki:LINE、YouTube追加。　\n**2020 9/5**　wiki改良。\n**2020 8/13** おみくじ内容追加。　\n**2020 8/12** おみくじ機能実装。　\n**2020 7/9** 試験運用開始。\n**2020 7/9 **  BOTの稼働を開始しました。",0x4169e1,ctx.message)
 
 @bot.command()
 async def test(ctx):
@@ -123,6 +123,8 @@ async def partnerserver(ctx):
     await ctx.send(embed=embed) 
     embed = discord.Embed(title="Torippiiism", description="以下のリンクから参加できます ",color=0x4169e1)
     embed.add_field(name="招待リンク:", value="https://discord.gg/kH6uR6R")
+    embed = discord.Embed(title="nakiの公開用鯖〜皆にnitroください", description="以下のリンクから参加できます ",color=0x4169e1)
+    embed.add_field(name="招待リンク:", value="https://discord.gg/5yavTEP")
     await ctx.send(embed=embed) 
     embed = discord.Embed(title="雑談サーバー旧(新型コロッケサーバー)", description="以下のリンクから参加できます ",color=0x4169e1)
     embed.add_field(name="招待リンク:", value="https://discord.gg/xmJT5As")
