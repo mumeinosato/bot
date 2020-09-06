@@ -109,7 +109,16 @@ async def wiki(ctx, *,arg:str=""):
 
     elif arg == "YouTube":
         await embox("YouTube","YouTubeとは、 \nhttps://ja.wikipedia.org/wiki/YouTube",0x4169e1,ctx.message)
-        
+
+ @bot.command()
+async def partnerserver(ctx):
+    embed = discord.Embed(title="提携サーバー一覧", description="以下のリンクから申請できます。",color=0x4169e1)
+    embed.add_field(name="申請ページ:", value="https://forms.gle/53okyZb9L6MXztzq6")
+    await ctx.send(embed=embed)
+    embed = discord.Embed(title="Weaの雑談サーバー", description=n以下のリンクから参加できます ",color=0x4169e1)
+    embed.add_field(name="招待リンク:", value="https://discord.gg/csJHtxZ")
+    await ctx.send(embed=embed) 
+
 @bot.event
 async def on_message(message):
     """
@@ -195,10 +204,7 @@ async def on_message(message):
     elif message.content.startswith("こんばん"):
         await message.channel.send("こんばんわんこそば")
         
-    elif message.content.startswith("mu:partnerserver"):
-        await embox("yysgsgsgs",0x4169e1,message)
-                                 
-       
+                                        
     await bot.process_commands(message)#on_messageの定義内の最後にこれを入れないと定義したコマンドが動かなくなる。注意
 
 bot.run(token)
