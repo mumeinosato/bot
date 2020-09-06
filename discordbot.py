@@ -236,8 +236,8 @@ async def on_message(message):
     elif message.content.startswith("えぇ...(困惑)"):
         await message.channel.send("困ってる？ならこのBotを使おう！(宣伝)")
         
-    elif message.content.startswith("こんばん"):
-        await message.channel.send("こんばんわんこそば")
+    elif message.content.startswith("せやな"):
+        await message.channel.send("https://tenor.com/view/%e7%8c%ab%e5%ae%ae%e3%81%b2%e3%81%aa%e3%81%9f-smile-virtual-youtuber-nekomiya-gif-11959563")
         
     elif message.content.startswith("こんばん"):
         await message.channel.send("こんばんわんこそば")    
