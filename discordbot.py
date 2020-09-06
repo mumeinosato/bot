@@ -110,7 +110,7 @@ async def wiki(ctx, *,arg:str=""):
     elif arg == "YouTube":
         await embox("YouTube","YouTubeとは、 \nhttps://ja.wikipedia.org/wiki/YouTube",0x4169e1,ctx.message)
 
- @bot.command
+@bot.command()
 async def partnerserver(ctx):
     embed = discord.Embed(title="提携サーバー一覧", description="以下のリンクから申請できます。",color=0x4169e1)
     embed.add_field(name="申請ページ:", value="https://forms.gle/53okyZb9L6MXztzq6")
