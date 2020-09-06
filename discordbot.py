@@ -118,7 +118,16 @@ async def partnerserver(ctx):
     embed = discord.Embed(title="Weaの雑談サーバー", description="以下のリンクから参加できます ",color=0x4169e1)
     embed.add_field(name="招待リンク:", value="https://discord.gg/9ayfU9K")
     await ctx.send(embed=embed) 
-
+    embed = discord.Embed(title="Minecraft非公式コミュニティ", description="以下のリンクから参加できます ",color=0x4169e1)
+    embed.add_field(name="招待リンク:", value="https://discord.gg/9rHM6FP")
+    await ctx.send(embed=embed) 
+    embed = discord.Embed(title="Torippiiism", description="以下のリンクから参加できます ",color=0x4169e1)
+    embed.add_field(name="招待リンク:", value="https://discord.gg/kH6uR6R")
+    await ctx.send(embed=embed) 
+    embed = discord.Embed(title="雑談サーバー旧(新型コロッケ)", description="以下のリンクから参加できます ",color=0x4169e1)
+    embed.add_field(name="招待リンク:", value="https://discord.gg/xmJT5As")
+    await ctx.send(embed=embed)
+    
 @bot.event
 async def on_message(message):
     """
