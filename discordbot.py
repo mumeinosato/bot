@@ -112,7 +112,7 @@ async def wiki(ctx, *,arg:str=""):
 
 @bot.command()
 async def partnerserver(ctx):
-    embed = discord.Embed(title="提携サーバー一覧", description="以下のリンクから申請できます。",color=0x4169e1)
+    embed = discord.Embed(title="提携サーバー一覧", description="以下のリンクから申請できます。",color=0xff0000)
     embed.add_field(name="申請ページ:", value="https://forms.gle/53okyZb9L6MXztzq6")
     await ctx.send(embed=embed)
     embed = discord.Embed(title="Weaの雑談サーバー", description="以下のリンクから参加できます ",color=0x4169e1)
