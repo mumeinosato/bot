@@ -138,6 +138,9 @@ async def partnerserver(ctx):
     embed = discord.Embed(title="✨Eveyone's notepad✨", description="以下のリンクから参加できます ",color=0x4169e1)
     embed.add_field(name="招待リンク:", value="https://discord.gg/JtSbYWP")
     await ctx.send(embed=embed)
+    embed = discord.Embed(title="雑談＆大都市マイクラ！（統合)",description="以下のリンクから参加できます ",color=0x4169e)
+    embed.add_field(name="招待リンク:", value="https://discord.gg/dySMGdg")
+    await ctx.send(embed=embed)
     
 @bot.event
 async def on_message(message):
