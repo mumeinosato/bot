@@ -64,6 +64,13 @@ async def newinfo(ctx):
     await embox("新着情報","\n**2020 9/6** 提携サーバー「partnerserver」で確認可能。　\n**2020 9/6** wiki:LINE、YouTube追加。　\n**2020 9/5**　wiki改良。\n**2020 8/13** おみくじ内容追加。　\n**2020 8/12** おみくじ機能実装。　\n**2020 7/9** 試験運用開始。\n**2020 7/9 **  BOTの稼働を開始しました。",0x4169e1,ctx.message)
 
 @bot.command()
+async def myinformation3861(ctx):
+    await embox("無名の里サービスに登録内容", "無名の里サービスの登録内容を確認できます。",0xff0000,ctx.message)
+    embed = discord.Embed(title="「雑談　暇人の仲間」の提携鯖主です", description="以下のリンクから提携をキャンセルできます",color=0x4169e1)
+    embed.add_field(name="提携キャンセルページ:", value="https://forms.gle/GAH6zP43H3JmPEx49")
+    await ctx.send(embed=embed)    
+    
+@bot.command()
 async def test(ctx):
     await embox("これはテストコマンドです。","特に意味はありません。",0x4169e1,ctx.message)
 
