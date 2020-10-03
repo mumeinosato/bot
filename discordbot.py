@@ -41,6 +41,7 @@ async def help(ctx):#コマンドを定義するときの関数は必ずContext�
     embed.add_field(name="about", value="botについてや、botの招待リンクを確認できます。",inline=False)
     embed.add_field(name="support", value="この botのサポートサーバーを表示できます。",inline=False)
     embed.add_field(name="partnerserver", value="提携サーバーを表示します。",inline=False)
+    embed.add_field(name="servermanagement", value="サーバー運営に役立つコマンド一覧を表示します。", inline=False)
     embed.add_field(name="myinformation 〔パスワード〕", value="登録内容を表示します。（パスワードを持っている場合のみアクセスできます。)",inline=False)
     await ctx.send(embed=embed)#Contextにはいろいろな情報が入っており、そこから様々な関数、情報にアクセスできる。ctx.sendがその一つ
 
@@ -63,6 +64,14 @@ async def support(ctx):
 async def newinfo(ctx):
     await embox("新着情報","\n**2020 9/6** 提携サーバー「partnerserver」で確認可能。　\n**2020 9/6** wiki:LINE、YouTube追加。　\n**2020 9/5**　wiki改良。\n**2020 8/13** おみくじ内容追加。　\n**2020 8/12** おみくじ機能実装。　\n**2020 7/9** 試験運用開始。\n**2020 7/9 **  BOTの稼働を開始しました。",0x4169e1,ctx.message)
 
+@bot.command()
+async def servermanagement(ctx):
+    await embox("サーバー運営に役立つコマンド一覧", "\n**promotionalwarning** \n宣伝チャンネル以外で宣伝した人向けに警告文を表示します",0xffff00,ctx.message)
+
+@bot.command()
+async def promotionalwarning(ctx):
+    await embox("宣伝チャンネルをご利用ください", "このチャンネルでは、宣伝が禁止されています。",0xff0000,ctx.message)
+    
 @bot.command()
 async def myinformation3861(ctx):
     await embox("無名の里サービスに登録内容", "無名の里サービスの登録内容を確認できます。",0xff0000,ctx.message)
