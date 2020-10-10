@@ -66,7 +66,7 @@ async def newinfo(ctx):
 
 @bot.command()
 async def servermanagement(ctx):
-    await embox("サーバー運営に役立つコマンド一覧", "\n**promotionalwarning** \n宣伝チャンネル以外で宣伝した人向けに警告文を表示します",0xffff00,ctx.message)
+    await embox("サーバー運営に役立つコマンド一覧", "\n**mesay (喋らせたい言葉)** \n埋め込みメッセージを送信します。　\n**promotionalwarning** \n宣伝チャンネル以外で宣伝した人向けに警告文を表示します",0xffff00,ctx.message)
 
 @bot.command()
 async def promotionalwarning(ctx):
@@ -83,6 +83,10 @@ async def myinformation3861(ctx):
 async def test(ctx):
     await embox("これはテストコマンドです。","特に意味はありません。",0x4169e1,ctx.message)
 
+@bot.command()
+async def emsay(ctx,*,arg):
+  await ctx.send(embed=discord.Embed(description=arg))
+    
 @bot.command()
 async def ping(ctx):
     starttime = time.time()
