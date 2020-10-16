@@ -10,7 +10,6 @@ import random
 
 bot = commands.Bot(command_prefix="mu:", help_command=None)
 token = os.environ['DISCORD_BOT_TOKEN']
-client = discord.Client()
 CHANNEL_ID =706416588160499796
  
 
@@ -34,10 +33,7 @@ async def embox(title,description,color,message):
 async def greet():
     channel = client.get_channel(CHANNEL_ID)
     await channel.send('おはよう！')
- 
-@client.event
-async def on_ready():
-    await greet() # 挨拶する非同期関数を実行
+ # 挨拶する非同期関数を実行
 
 @bot.command()
 async def help(ctx):#コマンドを定義するときの関数は必ずContextという引数が渡される。つまり引数を最低一つだけでも書いておかないと動かないので注意
