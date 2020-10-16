@@ -44,7 +44,7 @@ async def help(ctx):#コマンドを定義するときの関数は必ずContext�
     embed.add_field(name="wiki", value="開発者が知っていること、関係することについてwiki形式で見ることができます。",inline=False)
     embed.add_field(name="dice", value="サイコロを振ることができます。",inline=False)
     embed.add_field(name="omikuji", value="おみくじを引くことができます。",inline=False)
-    embed.add_field(neme="コマンド無し", value="「mumeinosato-global」というチャンネルを作成するとグローバルチャットに参加できます。",inline=False)
+    embed.add_field(name="コマンド無し", value="「mumeinosato-global」というチャンネルを作成するとグローバルチャットに参加できます。",inline=False)
     embed.add_field(name="ping", value="botのメッセージ送信速度をチェックします。",inline=False)
     embed.add_field(name="about", value="botについてや、botの招待リンクを確認できます。",inline=False)
     embed.add_field(name="support", value="この botのサポートサーバーを表示できます。",inline=False)
