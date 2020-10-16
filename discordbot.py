@@ -10,7 +10,6 @@ import random
 
 bot = commands.Bot(command_prefix="mu:", help_command=None)
 token = os.environ['DISCORD_BOT_TOKEN']
-client = discord.Client()
 CHANNEL_ID =706416588160499796
 GLOBAL_CH_NAME = "mumeinosato-global" 
 
