@@ -12,7 +12,7 @@ bot = commands.Bot(command_prefix="mu:", help_command=None)
 token = os.environ['DISCORD_BOT_TOKEN']
 client = discord.Client()
 CHANNEL_ID =706416588160499796
-GLOBAL_CH_NAME = "mumeinosato-global" 
+ 
 
 
 @bot.event
@@ -183,7 +183,9 @@ async def on_message(message):
     """#Bot判定は下のif文で十分。ちなみにこれは複数行コメントアウト
     if message.author.bot:
         return
-
+    
+    GLOBAL_CH_NAME = "mumeinosato-global"
+    
     if message.channel.name == GLOBAL_CH_NAME:                                                          
         print("success")
         await message.delete() # 元のメッセージは削除しておく
