@@ -188,7 +188,7 @@ async def on_message(message):
         print("success")
         await message.delete() # 元のメッセージは削除しておく
         channels = bot.get_all_channels()
-        global_channels = [ch for ch in channels if ch.name == GLOBAL_CH_NAME]
+        global_channels = [ch for ch in channels if ch.name == GLOBAL_CH_NAME:
         embed = discord.Embed(title="メッセージを送信しました",
             description=message.content, color=0x00bfff)
         embed.set_author(name=message.author.display_name,                                                                            
