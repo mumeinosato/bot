@@ -215,7 +215,7 @@ async def on_message(message):
             if(count == 5):
                break
     # google検索モードへの切り替え
-    if message.content == 'mu:Google':
+    if message.content == 'mu:google':
         ModeFlag = 1
         await message.channel.send('検索するワードをチャットで発言してね')
     
