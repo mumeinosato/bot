@@ -7,11 +7,12 @@ from discord.ext import commands
 import os
 import traceback
 import random
+from googlesearch import search
 
 bot = commands.Bot(command_prefix="mu:", help_command=None)
 token = os.environ['DISCORD_BOT_TOKEN']
 CHANNEL_ID =706416588160499796
- 
+
 
 
 @bot.event
@@ -195,6 +196,26 @@ async def on_message(message):
             icon_url=message.guild.icon_url_as(format="png"))# Embedインスタンスを生成、投稿者、投稿場所などの設定
         for channel in global_channels:# メッセージを埋め込み形式で転送
             await channel.send(embed=embed)
+    
+    global ModeFlag
+    if message.content == '!exit':
+        await message.channel.send('ﾉｼ')
+        sys.exit()
+    # google検索モード(次に何か入力されるとそれを検索)
+    if ModeFlag == 1:
+        kensaku = message.content
+        ModeFlag = 0
+        count = 0
+        # 日本語で検索した上位5件を順番に表示
+        for url in search(kensaku, lang="jp",num_results = 5):
+            await message.channel.send(url)
+            count += 1
+            if(count == 5):
+               break
+    # google検索モードへの切り替え
+    if message.content == 'mu:Google':
+        ModeFlag = 1
+        await message.channel.send('検索するワードをチャットで発言してね')
     
     if bot.user in message.mentions:
         print(f"{message.author.name}にメンションされました")
