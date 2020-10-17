@@ -44,6 +44,7 @@ async def help(ctx):#コマンドを定義するときの関数は必ずContext�
     #↑ここのテキストは自分で修正よろしく
     embed.add_field(name="help", value="このコマンドです。",inline=False)
     embed.add_field(name="newinfo", value="新着情報を確認します。",inline=False)
+    embed.add_field(name="google", value="Google検索をします。",inline=False)
     embed.add_field(name="wiki", value="開発者が知っていること、関係することについてwiki形式で見ることができます。",inline=False)
     embed.add_field(name="dice", value="サイコロを振ることができます。",inline=False)
     embed.add_field(name="omikuji", value="おみくじを引くことができます。",inline=False)
