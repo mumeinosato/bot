@@ -58,7 +58,7 @@ async def help(ctx):#コマンドを定義するときの関数は必ずContext�
 @bot.command()
 async def about(ctx):
     embed = discord.Embed(title="このbotについて...", description="Mumeinosato bot/ むめいのさと　ぼっと",color=0x4169e1)
-    embed.add_field(name="製作者", value="Mumeinosato#7252 \n[YouTube](https://www.youtube.com/channel/UCpb92184AP2Ffhyf7u2bD3w?view_as=subscriber)[Twitter](https://mobile.twitter.com/mumeinosato)",inline=False)
+    embed.add_field(name="製作者", value="Mumeinosato#7252 \n[無名の里](https://www.youtube.com/channel/UCpb92184AP2Ffhyf7u2bD3w?view_as=subscriber) [@mumeinosato](https://mobile.twitter.com/mumeinosato)",inline=False)
     embed.add_field(name="バージョン", value="Ver.1.3.3\n提携サーバー表示版",inline=False)
     embed.add_field(name="このbotを招待", value="[こちら](https://discord.com/api/oauth2/authorize?client_id=729668738877620255&permissions=272103536&scope=bot)から招待できます",inline=False)
     embed.add_field(name="サポートサーバー", value="[こちら](https://discord.gg/csJHtxZ)から参加できます。",inline=False)
