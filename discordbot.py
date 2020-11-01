@@ -46,10 +46,8 @@ async def help(ctx):#コマンドを定義するときの関数は必ずContext�
     #↑ここのテキストは自分で修正よろしく
     embed.add_field(name="help", value="このコマンドです。",inline=False)
     embed.add_field(name="newinfo", value="新着情報を確認します。",inline=False)
-    embed.add_field(name="google", value="Google検索をします。",inline=False)
     embed.add_field(name="wiki", value="開発者が知っていること、関係することについてwiki形式で見ることができます。",inline=False)
     embed.add_field(name="コマンド無し", value="「mumeinosato-global」というチャンネルを作成するとグローバルチャットに参加できます。",inline=False)
-    embed.add_field(name="ping", value="botのメッセージ送信速度をチェックします。",inline=False)
     embed.add_field(name="game", value="このbotでできるゲーム一覧を表示します。",inline=False)
     embed.add_field(name="tool", value="便利ツール一覧を表示します。",inline=False)
     embed.add_field(name="about", value="botについてや、botの招待リンクを確認できます。",inline=False)
@@ -85,7 +83,11 @@ async def servermanagement(ctx):
 @bot.command()
 async def game(ctx):
     await embox("ゲーム一覧", "\n**omikuji** \nおみくじを引くことができます。　\n**dice** \nサイコを振ることができます。",0x4169e1,ctx.message)              
-    
+ 
+@bot.command()
+async def tool(ctx):
+    await embox("便利ツール一覧", "\n**google** \n Google検索をします。　\n**translation** \n翻訳をします。　\n**charactercode** \n言語を検出します。　\n**ping** \nbotのメッセージ送信速度をチェックします。",0x4169e1)
+
 @bot.command()
 async def promotionalwarning(ctx):
     await embox("宣伝チャンネルをご利用ください", "このチャンネルでは、宣伝が禁止されています。",0xff0000,ctx.message)
