@@ -279,7 +279,7 @@ async def on_message(message):
         await message.channel.send("草")
                 
     elif message.content.startswith("w"):
-        await message.channel.send("www)
+        await message.channel.send("www")
         
     elif message.content.startswith("だろ"):
         await message.channel.send("そうだよ")
