@@ -222,7 +222,7 @@ async def on_message(message):
         ModeFlag = 1
         await message.channel.send('検索するワードをチャットで発言してね')
         
-    if message.content.startswith('mu:trans'):
+    if message.content.startswith('mu:translation'):
         say = message.content
         say = say[7:]
         if say.find('-') == -1:
@@ -250,7 +250,7 @@ async def on_message(message):
             embed.add_field(name='翻訳後', value=convert_string.text, inline=False)
             await message.channel.send(embed=embed)
 
-    if message.content.startswith('mu:detect'):
+    if message.content.startswith('mu:charactercode'):
         say = message.content
         s = say[8:]
         detect = translator.detect(s)
