@@ -254,7 +254,7 @@ async def on_message(message):
         say = message.content
         s = say[8:]
         detect = translator.detect(s)
-        m = 'この文字列の言語はたぶん ' + detect.lang + ' です。'
+        m = 'この文字列の言語はたぶん ' + detect.lang + ' です。言語コードは、こちらから確認できます。https://ja.wikipedia.org/wiki/ISO_639-1コード一覧'
         await message.channel.send(m)    
     
     if bot.user in message.mentions:
