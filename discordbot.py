@@ -45,13 +45,11 @@ async def help(ctx):#コマンドを定義するときの関数は必ずContext�
     embed = discord.Embed(title="ヘルプ", description="このヘルプコマンドにはプレフィックスを書いていないため、\n実行には全て`mu:コマンド名`とする必要があります。",color=0x4169e1)
     #↑ここのテキストは自分で修正よろしく
     embed.add_field(name="**help**", value="このコマンドです。",inline=False)
+    embed.add_field(name="**about**", value="botについてや、botの招待リンク、サポートサーバーを確認できます。",inline=False)
     embed.add_field(name="**newinfo**", value="新着情報を確認します。",inline=False)
-    embed.add_field(name="**wiki**", value="開発者が知っていること、関係することについてwiki形式で見ることができます。",inline=False)
     embed.add_field(name="**コマンド無し**", value="「mumeinosato-global」というチャンネルを作成するとグローバルチャットに参加できます。",inline=False)
     embed.add_field(name="**game**", value="このbotでできるゲーム一覧を表示します。",inline=False)
     embed.add_field(name="**tool**", value="便利ツール一覧を表示します。",inline=False)
-    embed.add_field(name="**about**", value="botについてや、botの招待リンク、サポートサーバーを確認できます。",inline=False)
-    embed.add_field(name="**partnerserver**", value="提携サーバーを表示します。",inline=False)
     embed.add_field(name="**servermanagement**", value="サーバー運営に役立つコマンド一覧を表示します。", inline=False)
     embed.add_field(name="**partner**", value="提携しているもの一覧を表示します。",inline=False)
     embed.add_field(name="**myinformation 〔パスワード〕**", value="登録内容を表示します。（パスワードを持っている場合のみアクセスできます。)",inline=False)
@@ -80,8 +78,12 @@ async def game(ctx):
  
 @bot.command()
 async def tool(ctx):
-    await embox("便利ツール一覧", "\n**google** \n Google検索をします。　\n**translation** \n翻訳をします。　\n**charactercode** \n言語を検出します。　\n**ping** \nbotのメッセージ送信速度をチェックします。",0x4169e1)
+    await embox("便利ツール一覧", "\n**google** \nGoogle検索をします。　\n**translation** \n翻訳をします。　\n**charactercode** \n言語を検出します。　\n**ping** \nbotのメッセージ送信速度をチェックします。",0x4169e1)
 
+@bot.command()
+async def partner(ctx):
+    await embox("提携一覧", "\n**partnerserver** \n提携サーバーを表示します。",0x4169e1,ctx.message)
+    
 @bot.command()
 async def promotionalwarning(ctx):
     await embox("宣伝チャンネルをご利用ください", "このチャンネルでは、宣伝が禁止されています。",0xff0000,ctx.message)
@@ -108,45 +110,6 @@ async def ping(ctx):
     ping = time.time() - starttime
     await msg.edit(content=f"測定結果:{round(ping * 1000)}ms")
     #float(ping * 1000)
-
-@bot.command()
-async def wiki(ctx, *,arg:str=""):
-    """
-    コマンドには引数を指定できる。
-    例えばこの場合は「tb:wiki Switch」と送信すると引数argに"Switch"が渡される。
-    ちなみに引数が無いときは空の文字列が自動で入るようになっているけどここの説明は難しいので省略
-    """
-    if not arg:#こうしておくと、文字列が空であるとき(つまりこの場合は引数が渡されなかったとき)にifの中が実行される
-        embed = discord.Embed(title="MumeinosatoのWikiへようこそ！", description="開発者が知っていることや関係することについてwiki形式で紹介します。\n(実行は全て`mu:wiki カテゴリー名又は単語名`というように行ってください。) \nwiki追加申請は、サポートサーバーからできます。",color=0x4169e1)
-        embed.add_field(name="現在登録されているもの:", value="\nゲーム\nゲーム機\nSNS")
-        await ctx.send(embed=embed)
-
-    elif arg == "ゲーム":
-        await embox("ゲームカテゴリー","現在登録されているもの　\nアスファルト 9: Legends",0x4169e1,ctx.message)
-   
-    elif arg == "ゲーム機":
-        await embox("ゲーム機カテゴリー","現在登録されているもの \nNintendo Switch",0x4169e1,ctx.message)
-        
-    elif arg == "SNS":
-        await embox("SNSカテゴリー","現在登録されているもの \nYouTube\nTwitter\nDiscord\nLINE",0x4169e1,ctx.message)
-
-    elif arg == "アスファルト 9: Legends":#スペースまで一字一句一致してないとifの中が実行されないので変えた方がいいかも
-        await embox("アスファルト 9: Legends","アスファルト 9: Legends とは、\nhttps://ja.wikipedia.org/wiki/アスファルト9:Legends",0x4169e1,ctx.message)
-    
-    elif arg == "Nintendo Switch":
-        await embox("Nintendo Switch","Nintendo  Switch とは、\nhttps://ja.wikipedia.org/wiki/Nintendo_Switch",0x4169e1,ctx.message)
-
-    elif arg == "Discord":
-        await embox("Discord","Discordとは、 \nhttps://ja.wikipedia.org/wiki/Discord_(ソフトウェア)",0x4169e1,ctx.message)
-
-    elif arg == "LINE":
-        await embox("LINE","LINEとは、　\nhttps://ja.wikipedia.org/wiki/LINE_(アプリケーション)",0x4169e1,ctx.message)
-
-    elif arg == "YouTube":
-        await embox("YouTube","YouTubeとは、 \nhttps://ja.wikipedia.org/wiki/YouTube",0x4169e1,ctx.message)
-       
-    elif arg == "Twitter":
-        await embox("Twitter","Twitterとは、　\nhttps://ja.wikipedia.org/wiki/Twitter",0x416e1,ctx.message)
 
 @bot.command()
 async def partnerserver(ctx):
