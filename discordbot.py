@@ -50,8 +50,7 @@ async def help(ctx):#コマンドを定義するときの関数は必ずContext�
     embed.add_field(name="**コマンド無し**", value="「mumeinosato-global」というチャンネルを作成するとグローバルチャットに参加できます。",inline=False)
     embed.add_field(name="**game**", value="このbotでできるゲーム一覧を表示します。",inline=False)
     embed.add_field(name="**tool**", value="便利ツール一覧を表示します。",inline=False)
-    embed.add_field(name="**about**", value="botについてや、botの招待リンクを確認できます。",inline=False)
-    embed.add_field(name="**support**", value="この botのサポートサーバーを表示できます。",inline=False)
+    embed.add_field(name="**about**", value="botについてや、botの招待リンク、サポートサーバーを確認できます。",inline=False)
     embed.add_field(name="**partnerserver**", value="提携サーバーを表示します。",inline=False)
     embed.add_field(name="**servermanagement**", value="サーバー運営に役立つコマンド一覧を表示します。", inline=False)
     embed.add_field(name="**partner**", value="提携しているもの一覧を表示します。",inline=False)
@@ -64,13 +63,7 @@ async def about(ctx):
     embed.add_field(name="製作者", value="Mumeinosato#7252",inline=True)
     embed.add_field(name="バージョン", value="Ver.1.3.3\n提携サーバー表示版",inline=False)
     embed.add_field(name="このbotを招待", value="[こちら](https://discord.com/api/oauth2/authorize?client_id=729668738877620255&permissions=272103536&scope=bot)から招待できます",inline=False)
-    await ctx.send(embed=embed)
-
-
-@bot.command()
-async def support(ctx):
-    embed = discord.Embed(title="サポートサーバーについて...", description="以下のリンクから参加できます。",color=0x4169e1)
-    embed.add_field(name="招待リンク:", value="https://discord.gg/csJHtxZ")
+    embed.add_field(neme="サポートサーバー", value="[こちら](https://discord.gg/csJHtxZ)から参加できます。",inline=False)
     await ctx.send(embed=embed)
 
 @bot.command()
