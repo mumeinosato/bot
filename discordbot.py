@@ -54,6 +54,7 @@ async def help(ctx):#コマンドを定義するときの関数は必ずContext�
     embed.add_field(name="**support**", value="この botのサポートサーバーを表示できます。",inline=False)
     embed.add_field(name="**partnerserver**", value="提携サーバーを表示します。",inline=False)
     embed.add_field(name="**servermanagement**", value="サーバー運営に役立つコマンド一覧を表示します。", inline=False)
+    embed.add_field(name="**partner**", value="提携しているもの一覧を表示します。",inline=False)
     embed.add_field(name="**myinformation 〔パスワード〕**", value="登録内容を表示します。（パスワードを持っている場合のみアクセスできます。)",inline=False)
     await ctx.send(embed=embed)#Contextにはいろいろな情報が入っており、そこから様々な関数、情報にアクセスできる。ctx.sendがその一つ
 
